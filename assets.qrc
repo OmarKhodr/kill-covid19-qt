@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/covidMainMenu.jpeg</file>
+        <file>images/laughingVirus.jpg</file>
+        <file>images/intro-background.jpeg</file>
+        <file>sounds/intro-music.mp3</file>
+    </qresource>
+</RCC>
