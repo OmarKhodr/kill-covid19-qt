@@ -1,9 +1,17 @@
 #include <QApplication>
 #include <QGraphicsView>
-#include "mainmenu.h"
-#include "difficultywindow.h"
 #include "introwidget.h"
 
+
+/**
+ * @brief main, the main window
+ * @param argc
+ * @param argv
+ *
+ * We open an create and show an instance of IntroWidget
+ *
+ * @return
+ */
 int main(int argc,char** argv){
     QApplication app(argc, argv);
 

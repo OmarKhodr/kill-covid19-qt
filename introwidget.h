@@ -24,6 +24,8 @@ private:
     void setupLayout();
     void setupConnections();
     void setupMusic();
+    void keyPressEvent(QKeyEvent *event);
+
 
 public slots:
     void clickPlay();

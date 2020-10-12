@@ -10,12 +10,15 @@ class SettingsWidget : public QWidget
 public:
     explicit SettingsWidget(QWidget *parent = nullptr);
 
+    bool readyButtonAvailable;
     QLabel* titleLabel;
     QPushButton* easyButton;
     QPushButton* mediumButton;
     QPushButton* hardButton;
+    QPushButton* readyButton;
     QLabel* explainDiffLabel;
     QString difficultyChosen;
+    QVBoxLayout* vbox;
 
 private:
     void setupBackground();
@@ -24,6 +27,15 @@ private:
     void setupLayout();
     void centerWindow();
     void setupConnections();
+    void showReadyButton();
+
+
+private slots:
+    void clickEasy();
+    void clickMedium();
+    void clickHard();
+    void clickReady();
+
 
 signals:
 
