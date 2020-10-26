@@ -1,6 +1,8 @@
 #ifndef SETTINGSWIDGET_H
 #define SETTINGSWIDGET_H
 
+#include "howtoplaywindow.h"
+
 #include <QWidget>
 #include <QtWidgets>
 
@@ -16,6 +18,7 @@ public:
     QPushButton* mediumButton;
     QPushButton* hardButton;
     QPushButton* readyButton;
+    QPushButton* howToPlayButton;
     QLabel* explainDiffLabel;
     QString difficultyChosen;
     QVBoxLayout* vbox;
@@ -35,6 +38,7 @@ private slots:
     void clickMedium();
     void clickHard();
     void clickReady();
+    void clickHowTo();
 
 
 signals:

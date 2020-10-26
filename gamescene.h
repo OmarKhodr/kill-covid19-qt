@@ -13,6 +13,10 @@ public:
 
     SyringeItem* syringe;
     VirusItem* virus;
+    QLabel* smallCounterLabel;
+    QLabel* mediumCounterLabel;
+    QLabel* largeCounterLabel;
+    QLabel* totalCounterLabel;
 
 };
 

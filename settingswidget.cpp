@@ -58,6 +58,7 @@ void SettingsWidget::setupWidgets() {
     mediumButton = new QPushButton("Medium");
     hardButton = new QPushButton("Hard");
     readyButton = new QPushButton("Ready");
+    howToPlayButton = new QPushButton("HELP");
 
     explainDiffLabel = new QLabel();
     explainDiffLabel->setAlignment(Qt::AlignCenter);
@@ -101,11 +102,13 @@ void SettingsWidget::setupLayout() {
     vbox->addWidget(easyButton);
     vbox->addWidget(mediumButton);
     vbox->addWidget(hardButton);
+    vbox->addWidget(howToPlayButton);
     vbox->addWidget(explainDiffLabel);
 
     vbox->setAlignment(easyButton, Qt::AlignHCenter);
     vbox->setAlignment(mediumButton, Qt::AlignHCenter);
     vbox->setAlignment(hardButton, Qt::AlignHCenter);
+    vbox->setAlignment(howToPlayButton, Qt::AlignHCenter);
 }
 
 
@@ -122,6 +125,9 @@ void SettingsWidget::setupConnections(){
     QObject::connect(easyButton, SIGNAL(clicked(bool)), this, SLOT(clickEasy()));
     QObject::connect(mediumButton, SIGNAL(clicked(bool)), this, SLOT(clickMedium()));
     QObject::connect(hardButton, SIGNAL(clicked(bool)), this, SLOT(clickHard()));
+
+    // when we press how to play
+    QObject::connect(howToPlayButton, SIGNAL(clicked(bool)), this, SLOT(clickHowTo()));
 
     // when we press the ready button
     QObject::connect(readyButton, SIGNAL(clicked(bool)), this, SLOT(clickReady()));
@@ -185,6 +191,11 @@ void SettingsWidget::clickHard(){
      showReadyButton();
 }
 
+
+void SettingsWidget::clickHowTo(){
+    howToPlayWindow* howTo = new howToPlayWindow();
+    howTo->show();
+}
 
 
 /**

@@ -4,6 +4,7 @@ QT += widgets \
 SOURCES += \
     gamescene.cpp \
     gameview.cpp \
+    howtoplaywindow.cpp \
     introwidget.cpp \
     main.cpp \
     settingswidget.cpp \
@@ -16,6 +17,7 @@ RESOURCES += \
 HEADERS += \
     gamescene.h \
     gameview.h \
+    howtoplaywindow.h \
     introwidget.h \
     settingswidget.h \
     syringeitem.h \
