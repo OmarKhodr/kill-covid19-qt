@@ -1,9 +1,12 @@
 #include "settingswidget.h"
 
+#include <QGraphicsView>
+#include <gameview.h>
+
 
 /**
  * @brief SettingsWidget::SettingsWidget, constructor
- * @param parent
+ * @param parent Parent widget
  * @file settingswidget.h
  * constructor that sets the: background, widgets, style, layout and connections
  */
@@ -131,14 +134,14 @@ void SettingsWidget::setupConnections(){
  * Centering the window
  */
 void SettingsWidget::centerWindow() {
-        setGeometry(
-            QStyle::alignedRect(
-                Qt::LeftToRight,
-                Qt::AlignCenter,
-                this->size(),
-                qApp->desktop()->availableGeometry()
-            )
-        );
+    setGeometry(
+        QStyle::alignedRect(
+            Qt::LeftToRight,
+            Qt::AlignCenter,
+            this->size(),
+            qApp->desktop()->availableGeometry()
+        )
+    );
 }
 
 
@@ -189,7 +192,8 @@ void SettingsWidget::clickHard(){
  * @file settingswidget.h
  */
 void SettingsWidget::clickReady(){
-
+    GameView* view = new GameView();
+    view->show();
 }
 
 
