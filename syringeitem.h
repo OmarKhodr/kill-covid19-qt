@@ -10,16 +10,6 @@ class SyringeItem : public QObject, public QGraphicsPixmapItem
 public:
     explicit SyringeItem(QObject *parent = nullptr);
 
-private:
-    void keyPressEvent(QKeyEvent *event);
-    void moveSyringe(bool side);
-    bool side;
-    int angle;
-    bool goingDown;
-
-private slots:
-    void timeoutRotate();
-
 signals:
 
 };

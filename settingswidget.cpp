@@ -205,6 +205,7 @@ void SettingsWidget::clickHowTo(){
 void SettingsWidget::clickReady(){
     GameView* view = new GameView();
     view->show();
+    this->close();
 }
 
 

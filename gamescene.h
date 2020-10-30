@@ -18,6 +18,20 @@ public:
     QLabel* largeCounterLabel;
     QLabel* totalCounterLabel;
 
+    double syringeDirection;
+    bool syringeShot;
+    int fallingRate;
+
+    void keyPressEvent(QKeyEvent *event) override;
+
+    void setupBackground();
+    void setupItems();
+    void setupState();
+
+private slots:
+    void updateScene();
+
+
 };
 
 #endif // GAMESCENE_H
