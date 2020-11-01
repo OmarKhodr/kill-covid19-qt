@@ -4,6 +4,9 @@
 #include <QtWidgets>
 #include <syringeitem.h>
 #include <virusitem.h>
+#include "mediumvirusitem.h"
+#include "largevirusitem.h"
+#include <stainitem.h>
 
 class GameScene : public QGraphicsScene
 {
@@ -13,6 +16,12 @@ public:
 
     SyringeItem* syringe;
     VirusItem* virus;
+    int smallScore;
+    int mediumScore;
+    int largeScore;
+    int totalScore;
+    int misses;
+    QLabel* missesLabel;
     QLabel* smallCounterLabel;
     QLabel* mediumCounterLabel;
     QLabel* largeCounterLabel;
@@ -20,6 +29,7 @@ public:
 
     double syringeDirection;
     bool syringeShot;
+    bool syringeSide;
     int fallingRate;
 
     void keyPressEvent(QKeyEvent *event) override;

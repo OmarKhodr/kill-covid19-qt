@@ -40,7 +40,7 @@ void howToPlayWindow::setupWidgets(){
                               "font: bold 27px;");
     titleLabel->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
 
-    explainLabel = new QLabel(" - Press ENTER to shoot the syringe");
+    explainLabel = new QLabel(" - Press LEFT to shoot the syringe \n- Player loses the game after 3 misses");
     explainLabel->setStyleSheet("color: white;"
                               "font: 15px;");
     titleLabel->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);

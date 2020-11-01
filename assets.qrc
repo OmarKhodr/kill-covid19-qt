@@ -7,5 +7,8 @@
         <file>images/syringe.png</file>
         <file>images/virus.png</file>
         <file>sounds/intro-music.mp3</file>
+        <file>images/stain.png</file>
+        <file>images/mediumVirus.png</file>
+        <file>images/largeVirus.png</file>
     </qresource>
 </RCC>
