@@ -16,27 +16,42 @@ public:
 
     SyringeItem* syringe;
     VirusItem* virus;
+    stainItem* stain;
     int smallScore;
     int mediumScore;
     int largeScore;
     int totalScore;
+    int winningScore;
     int misses;
+    int maxMisses;
     QLabel* missesLabel;
     QLabel* smallCounterLabel;
     QLabel* mediumCounterLabel;
     QLabel* largeCounterLabel;
     QLabel* totalCounterLabel;
+    QVector<QPair<int, int>*>* viruses;
+
+    QGraphicsProxyWidget* popupItem;
 
     double syringeDirection;
     bool syringeShot;
     bool syringeSide;
-    int fallingRate;
+    bool hitVirus;
+    double fallingRate;
+    int virusType;
+    int waiting;
+    int killedViruses;
+    int virusCounter;
+
+    QTimer* updateTimer;
 
     void keyPressEvent(QKeyEvent *event) override;
 
     void setupBackground();
-    void setupItems();
+    void setupConfig();
     void setupState();
+    void setupItems();
+    void startTimer();
 
 private slots:
     void updateScene();
